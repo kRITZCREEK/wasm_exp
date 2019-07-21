@@ -15,6 +15,15 @@ fn gen_add() -> FunctionDefinition {
             Local::new(1, ValueType::I32),
             Local::new(1, ValueType::I32),
         ])
+        .with_instructions(Instructions::new(vec![
+            Instruction::GetLocal(0),
+            Instruction::I32Load16U(1, 0),
+            Instruction::SetLocal(1),
+            Instruction::GetLocal(1),
+            Instruction::GetLocal(2),
+            Instruction::I32Add,
+            Instruction::End,
+        ]))
         .build()
         .build()
 }
