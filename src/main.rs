@@ -1,8 +1,11 @@
+extern crate simlwasm;
 extern crate wabt;
 extern crate wasmi;
 use std::fs;
 
-use wasmi::{ImportsBuilder, ModuleInstance, NopExternals, RuntimeValue};
+use simlwasm::codegen::*;
+
+use wasmi::{ImportsBuilder, ModuleInstance, NopExternals};
 
 fn main() {
     let contents =
@@ -16,6 +19,7 @@ fn main() {
         }
         Ok(wasm) => wasm,
     };
+    let wat_again = wabt::wasm2wat(&wasm_binary).unwrap();
 
     // Load wasm binary and prepare it for instantiation.
     let module = wasmi::Module::from_buffer(&wasm_binary).expect("failed to load wasm");
@@ -31,5 +35,7 @@ fn main() {
         instance
             .invoke_export("test", &[], &mut NopExternals,)
             .expect("failed to execute export")
-    )
+    );
+
+    test_codegen()
 }

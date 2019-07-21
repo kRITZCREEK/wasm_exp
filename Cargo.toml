@@ -7,3 +7,12 @@ edition = "2018"
 [dependencies]
 wasmi = "0.5"
 wabt = "0.8"
+parity-wasm = "0.39"
+
+[lib]
+name = "simlwasm"
+path = "src/lib.rs"
+
+[[bin]]
+name = "simlwasm"
+path = "src/main.rs"

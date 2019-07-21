@@ -89,6 +89,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "parity-wasm"
+version = "0.39.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "proc-macro2"
 version = "0.4.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -174,6 +179,7 @@ dependencies = [
 name = "wasm_exp"
 version = "0.1.0"
 dependencies = [
+ "parity-wasm 0.39.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "wabt 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasmi 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -213,6 +219,7 @@ dependencies = [
 "checksum num-rational 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "f2885278d5fe2adc2f75ced642d52d879bffaceb5a2e0b1d4309ffdfb239b454"
 "checksum num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)" = "6ba9a427cfca2be13aa6f6403b0b7e7368fe982bfa16fccc450ce74c46cd9b32"
 "checksum parity-wasm 0.31.3 (registry+https://github.com/rust-lang/crates.io-index)" = "511379a8194230c2395d2f5fa627a5a7e108a9f976656ce723ae68fca4097bfc"
+"checksum parity-wasm 0.39.0 (registry+https://github.com/rust-lang/crates.io-index)" = "17cf2b50c5bd3badc0e148a4dbbe5592d553c38a430270a0fa2f67bf0ccd477b"
 "checksum proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)" = "cf3d2011ab5c909338f7887f4fc896d35932e29146c12c8d01da6b22a80ba759"
 "checksum quote 0.6.13 (registry+https://github.com/rust-lang/crates.io-index)" = "6ce23b6b870e8f94f81fb0a363d65d86675884b34a09043c81e5562f11c1f8e1"
 "checksum ryu 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c92464b447c0ee8c4fb3824ecc8383b81717b9f1e74ba2e72540aef7b9f82997"
